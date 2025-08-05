@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boost productivity with the Multiple URL Opener Tool, a free one-click solution to open multiple links instantly. No setup, works with all browsers.">
+  <meta name="keywords" content="Multiple URL Opener, open multiple URLs, free URL opener, one-click URL tool, browser URL opener, productivity tool">
+  <meta name="author" content="Rakib Alom">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Multiple URL Opener Tool - Free One-Click Access">
+  <meta property="og:description" content="Open multiple URLs instantly with our free Multiple URL Opener Tool. No setup required, perfect for productivity.">
+  <meta property="og:image" content="cover.jpg">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Multiple URL Opener Tool - Free One-Click Access">
+  <meta name="twitter:description" content="Open multiple URLs instantly with our free tool. No setup, works with all browsers.">
+  <meta name="twitter:image" content="cover.jpg">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+    @media (max-width: 640px) {
+      body { padding: 10px; }
+      .text-3xl { font-size: 1.5rem; }
+      .text-2xl { font-size: 1.25rem; }
+      .text-xl { font-size: 1rem; }
+      .text-lg { font-size: 0.875rem; }
+      .p-6 { padding: 1rem; }
+    }
+    .dark-mode {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+    .dark-mode .container-main {
+      background-color: #1e293b;
+    }
+    .dark-mode .bg-purple-600 { background-color: #8b5cf6; }
+    .dark-mode .hover\:bg-purple-700:hover { background-color: #7c3aed; }
+    .dark-mode .text-purple-600 { color: #a78bfa; }
+    .dark-mode .border-gray-300 { border-color: #334155; }
+    .dark-mode .bg-gray-200 { background-color: #1e293b; }
+    .dark-mode .text-gray-700 { color: #94a3b8; }
+    .dark-mode .shadow-md { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7); }
+    .dark-mode .header-section {
+      background-color: #2d3748;
+    }
+    .dark-mode .fas {
+      color: #ffffff;
+    }
+    .container-main {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .header-section {
+      background-color: #f3f4f6;
+      border-radius: 8px;
+    }
+    .faq-box, .video-box {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1.5rem;
+      background-color: #ffffff;
+    }
+    .dark-mode .faq-box, .dark-mode .video-box {
+      border-color: #334155;
+      background-color: #1e293b;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 28px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 15px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #8b5cf6;
+    }
+    input:focus + .slider {
+      box-shadow: 0 0 1px #8b5cf6;
+    }
+    input:checked + .slider:before {
+      -webkit-transform: translateX(22px);
+      -ms-transform: translateX(22px);
+      transform: translateX(22px);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 transition-colors duration-300">
+  <div class="container-main bg-white p-6 rounded-md">
+    <div class="header-section p-4 rounded-md mb-6">
+      <div class="flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-gray-800">Multiple URL Opener Tool</h1>
+        <div class="flex items-center">
+          <i class="fas fa-sun text-yellow-400 mr-2"></i>
+          <label class="switch">
+            <input type="checkbox" id="modeToggle">
+            <span class="slider round"></span>
+          </label>
+          <i class="fas fa-moon text-gray-800 ml-2"></i>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Left Column: Tool Description -->
+      <div class="p-6 shadow-md rounded-md">
+        <h1 class="text-3xl font-bold flex items-center text-gray-800">
+          <i class="fas fa-link mr-2 text-purple-600"></i> Multiple URL Opener Hub - Instant Free Access
+        </h1>
+        <div class="mt-4 space-y-3">
+          <p class="text-xl font-semibold text-gray-700"><i class="fas fa-check-circle mr-2 text-purple-600"></i> Open Multiple Links Simultaneously with Ease</p>
+          <p class="text-xl font-semibold text-gray-700"><i class="fas fa-check-circle mr-2 text-purple-600"></i> Compatible with All Major Browsers Seamlessly</p>
+          <p class="text-xl font-semibold text-gray-700"><i class="fas fa-check-circle mr-2 text-purple-600"></i> Completely Free with No Setup Needed</p>
+        </div>
+        <p class="mt-4 text-sm text-gray-600">Note: If your browser doesn't have permission to open multiple URLs together, please grant access in your browser settings.</p>
+      </div>
+      
+      <!-- Right Column: Tool -->
+      <div class="p-6 shadow-md rounded-md">
+        <textarea id="urls" class="w-full h-80 p-4 border border-gray-300 rounded-md shadow-md mb-4 focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Paste multiple URLs here, one per line"></textarea>
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <button id="openBtn" class="bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-md transition duration-300 w-full">Open</button>
+          <button id="clearBtn" class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-3 rounded-md transition duration-300 w-full">Clear</button>
+        </div>
+        <div id="urlList" class="mt-4"></div>
+      </div>
+    </div>
+    
+    <!-- FAQ Section -->
+    <section class="mt-8">
+      <div class="faq-box p-6 rounded-md shadow-md">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Frequently Asked Questions</h2>
+        <div id="faqs">
+          <h3 class="text-lg font-semibold mt-4 text-gray-700">Why Should I Use the Multiple URL Opener Tool?</h3>
+          <p class="mt-2 text-gray-600">The Multiple URL Opener Tool is an essential productivity booster, enabling you to open numerous web pages simultaneously with just one click. Ideal for professionals, students, or anyone conducting research, this tool eliminates the need to open each link manually, saving valuable time and enhancing workflow efficiency across various tasks.</p>
+          
+          <h3 class="text-lg font-semibold mt-4 text-gray-700">How Does the Multiple URL Opener Work?</h3>
+          <p class="mt-2 text-gray-600">Using the Multiple URL Opener is straightforward: paste your list of URLs into the textarea provided, ensuring each URL is on a new line, and hit the 'Open' button. The Multiple URL Opener will then open each link in a new tab, offering a seamless experience. Ensure your browser’s pop-up settings are configured to allow this functionality for best results.</p>
+          
+          <h3 class="text-lg font-semibold mt-4 text-gray-700">Is the Multiple URL Opener Tool Completely Free?</h3>
+          <p class="mt-2 text-gray-600">Absolutely, the Multiple URL Opener Tool is entirely free with no hidden charges or complex setup processes. Designed as a user-friendly solution, it provides instant access to multiple links without requiring subscriptions or premium accounts, making it accessible to all users worldwide.</p>
+          
+          <h3 class="text-lg font-semibold mt-4 text-gray-700">What Browsers Are Compatible with the Multiple URL Opener?</h3>
+          <p class="mt-2 text-gray-600">The Multiple URL Opener is fully compatible with all leading browsers such as Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge. This broad compatibility ensures that the Multiple URL Opener can be used effectively on various devices and operating systems, providing a consistent experience for all users.</p>
+          
+          <h3 class="text-lg font-semibold mt-4 text-gray-700">What Should I Do If URLs Don’t Open with the Multiple URL Opener?</h3>
+          <p class="mt-2 text-gray-600">If some URLs fail to open, it’s likely due to your browser’s pop-up blocker restricting the Multiple URL Opener. To resolve this, navigate to your browser settings—for instance, in Chrome, go to Settings > Privacy and Security > Site Settings > Pop-ups and redirects—and enable pop-ups for this site to ensure all links open correctly.</p>
+          
+          <h3 class="text-lg font-semibold mt-4 text-gray-700">Can I Open a Large Number of URLs with the Multiple URL Opener?</h3>
+          <p class="mt-2 text-gray-600">Yes, the Multiple URL Opener can process a substantial number of URLs, but opening an excessive amount simultaneously may strain your browser or device. For optimal performance with the Multiple URL Opener, it’s recommended to limit the number to around 20-30 URLs to prevent potential slowdowns or temporary freezes.</p>
+        </div>
+      </div>
+      
+      <!-- Video Tutorial -->
+      <div class="video-box mt-6 p-6 rounded-md shadow-md">
+        <h3 class="text-lg font-semibold text-gray-700">How to Use the Multiple URL Opener</h3>
+        <video controls class="w-full mt-2 rounded-md shadow-md">
+          <source src="path/to/tutorial/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="mt-8 text-center">
+      <p class="text-gray-600">&copy; 2025 Developed by <a href="https://rakibalom.com/" target="_blank" class="text-purple-600 hover:underline">Rakib Alom</a></p>
+    </footer>
+  </div>
+  
+  <!-- Modal for Permission Warning -->
+  <div id="permissionModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-md shadow-lg max-w-md w-full">
+      <p class="mb-4 text-gray-600">Some URLs were blocked by your browser. Please allow pop-ups for this site to open all URLs.</p>
+      <button id="accessBtn" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 mr-2 rounded-md transition duration-300">Access</button>
+      <button id="cancelBtn" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-md transition duration-300">Cancel</button>
+    </div>
+  </div>
+  
+  <script>
+    // Mode Toggle Functionality with Persistence
+    document.addEventListener('DOMContentLoaded', () => {
+      const modeToggle = document.getElementById('modeToggle');
+      const isDarkMode = localStorage.getItem('darkMode') === 'true';
+      if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        document.querySelector('.container-main').classList.add('dark-mode');
+        modeToggle.checked = true;
+      }
+      modeToggle.addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode', this.checked);
+        document.querySelector('.container-main').classList.toggle('dark-mode', this.checked);
+        localStorage.setItem('darkMode', this.checked);
+      });
+    });
+
+    // Open Button Functionality
+    document.getElementById('openBtn').addEventListener('click', function() {
+      const textarea = document.getElementById('urls');
+      const urls = textarea.value.split('\n').map(url => url.trim()).filter(url => url !== '');
+      
+      let blocked = false;
+      urls.forEach(url => {
+        const win = window.open(url, '_blank');
+        if (!win || typeof win === 'undefined' || win === null) {
+          blocked = true;
+        }
+      });
+      
+      if (blocked) {
+        document.getElementById('permissionModal').classList.remove('hidden');
+      }
+      
+      // Display the list of opened URLs
+      const urlList = document.getElementById('urlList');
+      urlList.innerHTML = '';
+      urls.forEach(url => {
+        const a = document.createElement('a');
+        a.href = url;
+        a.target = '_blank';
+        a.textContent = url;
+        a.className = 'block mt-1 text-purple-600 hover:underline';
+        urlList.appendChild(a);
+      });
+    });
+    
+    // Clear Button Functionality
+    document.getElementById('clearBtn').addEventListener('click', function() {
+      document.getElementById('urls').value = '';
+      document.getElementById('urlList').innerHTML = '';
+    });
+    
+    // Modal Button Functionality
+    document.getElementById('accessBtn').addEventListener('click', function() {
+      document.getElementById('permissionModal').classList.add('hidden');
+    });
+    
+    document.getElementById('cancelBtn').addEventListener('click', function() {
+      document.getElementById('permissionModal').classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
